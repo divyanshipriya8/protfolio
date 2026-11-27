@@ -3,105 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divyanshi Priya - Portfolio</title>
+<title>Diyanshi Priya - Portfolio</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Arial, sans-serif; }
-body { background:#f0f2f5; color:#333; }
-.header { background: linear-gradient(135deg, #667eea, #764ba2); color:white; text-align:center; padding:50px 20px 40px; }
-.profile-pic { width:180px; height:180px; border-radius:50%; border:5px solid white; object-fit:cover; display:block; margin:0 auto 15px auto; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.3); animation: popIn 1s ease; }
-@keyframes popIn { 0%{transform:scale(0) rotate(-10deg); opacity:0;} 70%{transform:scale(1.2) rotate(3deg);} 100%{transform:scale(1); opacity:1;} }
-.header h1 { font-size:32px; margin-bottom:5px; }
-.header p { opacity:0.9; font-size:16px; }
-.buttons { margin-top:20px; }
-.btn { display:inline-block; background:white; color:#667eea; padding:10px 22px; border-radius:25px; text-decoration:none; font-weight:bold; margin:5px; font-size:14px; }
-.btn2 { background:transparent; border:2px solid white; color:white; }
-.section { max-width:800px; margin:25px auto; background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.08); }
-.section h2 { color:#667eea; margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:8px; }
-.skills span { display:inline-block; background:#eef2ff; color:#667eea; padding:8px 14px; border-radius:20px; margin:5px; font-size:14px; font-weight:600; }
-.cert-grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
-.cert-card { background:#f8f9ff; border-radius:12px; padding:10px; text-align:center; border:1px solid #eee; }
-.cert-card img { width:100%; height:180px; object-fit:cover; border-radius:10px; cursor:pointer; transition:0.3s; animation: popIn 0.8s ease; }
-.cert-card img:hover { transform:scale(1.03); }
-.cert-card h3 { font-size:15px; margin:10px 0 3px; }
-.cert-card p { font-size:13px; color:#666; }
-.footer { text-align:center; padding:20px; color:#888; font-size:13px; }
-/* POP-OUT MODAL */
-.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:999; justify-content:center; align-items:center; }
-.modal img { max-width:90%; max-height:85%; border-radius:12px; border:4px solid white; animation: popIn 0.4s ease; }
-.close { position:absolute; top:15px; right:25px; color:white; font-size:35px; cursor:pointer; }
-@media(max-width:600px){ .cert-grid{grid-template-columns:1fr;} .header h1{font-size:26px;} }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#f0f2f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;text-align:center;padding:50px 20px 40px}
+.profile-pic{width:180px;height:180px;border-radius:50%;border:5px solid white;object-fit:cover;display:block;margin:0 auto 15px auto;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,0.3);animation:popIn 1s ease;background:#fff}
+@keyframes popIn{0%{transform:scale(0) rotate(-10deg);opacity:0}70%{transform:scale(1.2)}100%{transform:scale(1);opacity:1}}
+.header h1{font-size:34px}
+.header h3{font-weight:400;opacity:0.9;margin:6px 0}
+.header p{opacity:0.9;font-size:14px}
+.btn{display:inline-block;background:white;color:#667eea;padding:10px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin:5px;font-size:14px}
+.btn2{background:transparent;border:2px solid white;color:white}
+.section{max-width:850px;margin:25px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
+.section h2{color:#667eea;margin-bottom:15px;border-bottom:2px solid #eee;padding-bottom:8px}
+.skills span{display:inline-block;background:#eef2ff;color:#667eea;padding:8px 14px;border-radius:20px;margin:5px;font-size:14px;font-weight:600}
+.job{margin-bottom:18px}.job h3{font-size:16px}.job span{color:#888;font-size:13px}.job p{font-size:14px;color:#555;margin-top:4px}
+.proj{background:#f8f9ff;padding:15px;border-radius:12px;margin-bottom:12px;border:1px solid #eee}
+.proj h3{font-size:16px}.proj p{font-size:14px;color:#555}
+.cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.cert-card{background:#f8f9ff;border-radius:12px;padding:10px;text-align:center;border:1px solid #eee}
+.cert-card img{width:100%;height:180px;object-fit:cover;border-radius:10px;cursor:pointer;animation:popIn 0.8s ease}
+.cert-card h3{font-size:15px;margin:10px 0 3px}.cert-card p{font-size:13px;color:#666}
+.footer{text-align:center;padding:20px;color:#888;font-size:13px}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:999;justify-content:center;align-items:center}
+.modal img{max-width:90%;max-height:85%;border-radius:12px;border:4px solid white;animation:popIn 0.4s ease}
+.close{position:absolute;top:15px;right:25px;color:white;font-size:35px;cursor:pointer}
+@media(max-width:600px){.cert-grid{grid-template-columns:1fr}.header h1{font-size:26px}}
 </style>
 </head>
 <body>
-
 <div class="header">
-<img src="my-photo.jpg" class="profile-pic" onclick="openModal(this.src)" alt="Divyanshi Priya">
-<h1>Divyanshi Priya</h1>
-<p>BCA Student | Aspiring IT Professional</p>
-<p style="font-size:13px; margin-top:8px;">📍 Nalanda, Bihar | ✉️ divyanshipriya2006@gmail.com</p>
-<div class="buttons">
-<a href="https://www.linkedin.com/in/divyanshipriya" class="btn">LinkedIn</a>
-<a href="https://github.com/divyanshipriya8" class="btn btn2">GitHub</a>
+<img src="my-photo.jpg" class="profile-pic" onclick="openModal(this.src)" alt="Diyanshi Priya">
+<h1>Diyanshi Priya</h1>
+<h3>Final-Year B.Tech CSE Student | Aspiring DSA Lead</h3>
+<p>📍 Kolkata, West Bengal | ✉️ divyanshikaushik.8@gmail.com | 📞 +91 7717774393</p>
+<div style="margin-top:20px">
+<a href="https://www.linkedin.com/in/divyanshi-priya" class="btn">LinkedIn</a>
+<a href="https://github.com/divyanshipriya08" class="btn btn2">GitHub</a>
 </div>
-<p style="font-size:12px; margin-top:12px; opacity:0.8;">👆 Photo pe click karo - Pop Out hoga!</p>
-</div>
-
-<div class="section">
-<h2>👋 About Me</h2>
-<p>Hello! I'm Divyanshi Priya, a BCA student from Nalanda, Bihar. I am passionate about technology, networking, and cybersecurity. I love learning new skills and building projects.</p>
+<p style="font-size:12px;margin-top:12px;opacity:0.8">👆 Photo pe click karo - Pop Out hoga!</p>
 </div>
 
-<div class="section">
-<h2>💻 Skills</h2>
-<div class="skills">
-<span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Networking</span><span>Cybersecurity</span><span>SAP</span><span>MS Office</span>
-</div>
+<div class="section"><h2>👋 About Me</h2>
+<p>Results-driven and detail-oriented final-year Computer Science Engineering student at Techno India University with strong programming skills in C, C++, Java, and Python. Proficient in data structures, algorithms, and core CS fundamentals, with hands-on experience in data analytics and software development. Collaborative, analytical, and committed to innovation — eager to contribute as a DSA Lead.</p></div>
+
+<div class="section"><h2>🎓 Education</h2>
+<div class="job"><h3>Techno India University</h3><span>B.Tech in Computer Science Engineering | Aug 2022 – May 2026</span><p>Kolkata, West Bengal</p></div></div>
+
+<div class="section"><h2>💼 Work Experience</h2>
+<div class="job"><h3>Management Lead, Tech Club (TAKSHILA) - Techno India University</h3><span>2024 – 2026</span><p>• Organized robotics workshops and events for 100+ participants.<br>• Mentored 20+ students in hands-on tech projects.</p></div>
+<div class="job"><h3>Freelance Web Developer - Fiverr</h3><span>2023 – Present</span><p>• Built websites using HTML, CSS, JS, WordPress, React, Node, Tailwind, PHP for 10+ clients.</p></div>
+<div class="job"><h3>Frontend Intern - Internshala</h3><span>Jun 2025 – Jul 2025</span><p>• Developed interfaces using HTML, CSS, JS, improving engagement by 15%.</p></div>
+<div class="job"><h3>IBM Cloud Virtual Intern - AICTE & Eduskills</h3><span>May 2024 – Jul 2024</span><p>• Completed IBM Cloud modules and deployed cloud projects.</p></div>
+<div class="job"><h3>Member, Google Developer Group (GDG)</h3><span>2022 – 2023</span></div>
 </div>
 
-<div class="section">
-<h2>🏆 My Certificates</h2>
-<p style="font-size:13px; color:#888; margin-bottom:15px;">👆 Certificate pe click karo - Bada Pop Out hoke khulega!</p>
+<div class="section"><h2>🚀 Projects</h2>
+<div class="proj"><h3>Child Tracking System - AIML & IoT</h3><p>Real-time tracking using GPS + GSM with geo-fencing alerts and cloud dashboard.</p></div>
+<div class="proj"><h3>Krishi Mitra – Smart Farming Support System - IoT, Award-Winning</h3><p>Guided farmers on crop selection, schemes, and issue resolution.</p></div>
+<div class="proj"><h3>Online Voting System - AI, Web App</h3><p>Developed secure AI-based voting platform with blockchain integration.</p></div>
+</div>
+
+<div class="section"><h2>💻 Technical Skills</h2>
+<div class="skills"><span>Python</span><span>JavaScript</span><span>SQL</span><span>C</span><span>C++</span><span>Java</span><span>React.js</span><span>HTML</span><span>CSS</span><span>Tailwind</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>MySQL</span><span>TensorFlow</span><span>OpenCV</span><span>Git</span><span>GitHub</span><span>REST APIs</span><span>IBM Cloud</span></div></div>
+
+<div class="section"><h2>🏆 My Certificates</h2>
+<p style="font-size:13px;color:#888;margin-bottom:15px">👆 Certificate pe click karo - Bada Pop Out hoke khulega!</p>
 <div class="cert-grid">
-<div class="cert-card">
-<img src="certificate1.jpg" onclick="openModal(this.src)">
-<h3>SAP Certificate</h3>
-<p>SAP Learning</p>
-</div>
-<div class="cert-card">
-<img src="certificate2.jpg" onclick="openModal(this.src)">
-<h3>Networking Internship</h3>
-<p>Pradhan Mantri Internship</p>
-</div>
-<div class="cert-card">
-<img src="certificate3.jpg" onclick="openModal(this.src)">
-<h3>Getting Started with Cybersecurity</h3>
-<p>Online Course</p>
-</div>
-<div class="cert-card">
-<img src="certificate4.jpg" onclick="openModal(this.src)">
-<h3>JNCIA</h3>
-<p>Juniper Networks</p>
-</div>
-</div>
-</div>
+<div class="cert-card"><img src="certificate1.jpg" onclick="openModal(this.src)"><h3>SAP S/4 HANA Development</h3><p>Techno India University | Feb - Aug 2025</p></div>
+<div class="cert-card"><img src="certificate2.jpg" onclick="openModal(this.src)"><h3>Networking Internship</h3><p>Pradhan Mantri Internship</p></div>
+<div class="cert-card"><img src="certificate3.jpg" onclick="openModal(this.src)"><h3>Getting Started with Cybersecurity</h3><p>Online Course</p></div>
+<div class="cert-card"><img src="certificate4.jpg" onclick="openModal(this.src)"><h3>JNCIA</h3><p>Juniper Networks</p></div>
+</div></div>
 
-<div class="section">
-<h2>📞 Contact</h2>
-<p>📧 divyanshipriya2006@gmail.com<br>📍 Nalanda, Bihar, India<br>🔗 linkedin.com/in/divyanshipriya</p>
-</div>
+<div class="section"><h2>📞 Contact</h2><p>📧 divyanshikaushik.8@gmail.com<br>📞 +91 7717774393<br>📍 Kolkata, West Bengal, India<br>🔗 linkedin.com/in/divyanshi-priya | github.com/divyanshipriya08</p></div>
+<p class="footer">© 2026 Diyanshi Priya | Made with ❤️</p>
 
-<p class="footer">© 2026 Divyanshi Priya | Made with ❤️</p>
-
-<!-- POP OUT BOX -->
-<div id="myModal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
-<img id="modalImg">
-</div>
-
+<div id="myModal" class="modal" onclick="closeModal()"><span class="close">&times;</span><img id="modalImg"></div>
 <script>
-function openModal(src){ document.getElementById('myModal').style.display='flex'; document.getElementById('modalImg').src=src; }
-function closeModal(){ document.getElementById('myModal').style.display='none'; }
+function openModal(src){document.getElementById('myModal').style.display='flex';document.getElementById('modalImg').src=src;}
+function closeModal(){document.getElementById('myModal').style.display='none';}
 </script>
-
 </body>
 </html>
