@@ -1,90 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Divyanshi Priya - Portfolio</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divyanshi Priya - Portfolio</title>
 <style>
-body{font-family:Arial; margin:0; background:#fff5f7; color:#333; text-align:center;}
-.header{padding:30px 10px;}
-.header img{width:200px; height:200px; border-radius:50%; border:5px solid #ff4d6d; object-fit:cover; object-position:top;}
-h1{color:#ff4d6d;}
-.box{background:white; margin:20px; padding:20px; border-radius:15px;}
-.cert{background:white; padding:15px; border-radius:12px; margin-bottom:20px;}
-.cert img{width:90%; max-width:600px; border-radius:10px;}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Arial, sans-serif; }
+body { background:#f0f2f5; color:#333; }
+.header { background: linear-gradient(135deg, #667eea, #764ba2); color:white; text-align:center; padding:50px 20px 40px; }
+.profile-pic { width:180px; height:180px; border-radius:50%; border:5px solid white; object-fit:cover; display:block; margin:0 auto 15px auto; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,0.3); animation: popIn 1s ease; }
+@keyframes popIn { 0%{transform:scale(0) rotate(-10deg); opacity:0;} 70%{transform:scale(1.2) rotate(3deg);} 100%{transform:scale(1); opacity:1;} }
+.header h1 { font-size:32px; margin-bottom:5px; }
+.header p { opacity:0.9; font-size:16px; }
+.buttons { margin-top:20px; }
+.btn { display:inline-block; background:white; color:#667eea; padding:10px 22px; border-radius:25px; text-decoration:none; font-weight:bold; margin:5px; font-size:14px; }
+.btn2 { background:transparent; border:2px solid white; color:white; }
+.section { max-width:800px; margin:25px auto; background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.08); }
+.section h2 { color:#667eea; margin-bottom:15px; border-bottom:2px solid #eee; padding-bottom:8px; }
+.skills span { display:inline-block; background:#eef2ff; color:#667eea; padding:8px 14px; border-radius:20px; margin:5px; font-size:14px; font-weight:600; }
+.cert-grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.cert-card { background:#f8f9ff; border-radius:12px; padding:10px; text-align:center; border:1px solid #eee; }
+.cert-card img { width:100%; height:180px; object-fit:cover; border-radius:10px; cursor:pointer; transition:0.3s; animation: popIn 0.8s ease; }
+.cert-card img:hover { transform:scale(1.03); }
+.cert-card h3 { font-size:15px; margin:10px 0 3px; }
+.cert-card p { font-size:13px; color:#666; }
+.footer { text-align:center; padding:20px; color:#888; font-size:13px; }
+/* POP-OUT MODAL */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:999; justify-content:center; align-items:center; }
+.modal img { max-width:90%; max-height:85%; border-radius:12px; border:4px solid white; animation: popIn 0.4s ease; }
+.close { position:absolute; top:15px; right:25px; color:white; font-size:35px; cursor:pointer; }
+@media(max-width:600px){ .cert-grid{grid-template-columns:1fr;} .header h1{font-size:26px;} }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <img src="my-photo.jpg" style="width:180px; height:180px; border-radius:50%; border:5px solid white; object-fit:cover; object-position:top; display:block; margin:0 auto 15px auto;">
-  <h1>Hi, I'm Divyanshi Priya 👋</h1>
-  <p><b>Founder - PadhLeBhai | Web Developer | From Bihar, India</b></p>
-  <p>Har student ko free me padhna + certificate mile! ✨</p>
+<img src="my-photo.jpg" class="profile-pic" onclick="openModal(this.src)" alt="Divyanshi Priya">
+<h1>Divyanshi Priya</h1>
+<p>BCA Student | Aspiring IT Professional</p>
+<p style="font-size:13px; margin-top:8px;">📍 Nalanda, Bihar | ✉️ divyanshipriya2006@gmail.com</p>
+<div class="buttons">
+<a href="https://www.linkedin.com/in/divyanshipriya" class="btn">LinkedIn</a>
+<a href="https://github.com/divyanshipriya8" class="btn btn2">GitHub</a>
+</div>
+<p style="font-size:12px; margin-top:12px; opacity:0.8;">👆 Photo pe click karo - Pop Out hoga!</p>
 </div>
 
-<div class="box">
-  <h2>🚀 My Projects</h2>
-  <p>📚 PadhLeBhai - Free Notes + Certificate</p>
-  <p>🖥️ My Mini Computer</p>
-  <p>💰 Expense Tracker</p>
-  <p>🎉 My Fun World</p>
+<div class="section">
+<h2>👋 About Me</h2>
+<p>Hello! I'm Divyanshi Priya, a BCA student from Nalanda, Bihar. I am passionate about technology, networking, and cybersecurity. I love learning new skills and building projects.</p>
 </div>
 
-<div class="box">
-  <h2>🏆 My Certificates - 4 Certificates!</h2>
-  <div class="cert">
-    <img src="certificate1.jpg">
-    <h3>1. SAP S/4 HANA DEVELOPMENT</h3>
-    <p>01-02-2025 to 01-08-2025<br>SAP University Alliances | Techno India University</p>
-  </div>
-  <div class="cert">
-    <img src="certificate2.jpg">
-    <h3>2. Networking Virtual Internship - 10 Weeks</h3>
-    <p>Sep - Nov 2023<br>AICTE + EduSkills + Juniper Networks</p>
-  </div>
-  <div class="cert">
-    <img src="certificate3.jpg">
-    <h3>3. Getting Started with Networking</h3>
-    <p>01 Nov 2023<br>Juniper Networks</p>
-  </div>
-  <div class="cert">
-    <img src="certificate4.jpg">
-    <h3>4. JNCIA-Junos</h3>
-    <p>02 Nov 2023<br>Juniper Networks</p>
-  </div>
+<div class="section">
+<h2>💻 Skills</h2>
+<div class="skills">
+<span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Networking</span><span>Cybersecurity</span><span>SAP</span><span>MS Office</span>
+</div>
 </div>
 
-<div class="box">
-  <h2>🎯 My Dream</h2>
-  <p>Har student ko free me padhna + certificate mile!</p>
+<div class="section">
+<h2>🏆 My Certificates</h2>
+<p style="font-size:13px; color:#888; margin-bottom:15px;">👆 Certificate pe click karo - Bada Pop Out hoke khulega!</p>
+<div class="cert-grid">
+<div class="cert-card">
+<img src="certificate1.jpg" onclick="openModal(this.src)">
+<h3>SAP Certificate</h3>
+<p>SAP Learning</p>
 </div>
-<!-- CERTIFICATES -->
-<section style="padding:30px 15px; text-align:center;">
-  <h2 style="color:white; font-size:28px;">🏆 My Certificates</h2>
+<div class="cert-card">
+<img src="certificate2.jpg" onclick="openModal(this.src)">
+<h3>Networking Internship</h3>
+<p>Pradhan Mantri Internship</p>
+</div>
+<div class="cert-card">
+<img src="certificate3.jpg" onclick="openModal(this.src)">
+<h3>Getting Started with Cybersecurity</h3>
+<p>Online Course</p>
+</div>
+<div class="cert-card">
+<img src="certificate4.jpg" onclick="openModal(this.src)">
+<h3>JNCIA</h3>
+<p>Juniper Networks</p>
+</div>
+</div>
+</div>
 
-  <div style="background:white; border-radius:15px; padding:15px; margin:15px auto; max-width:650px; color:#333;">
-    <img src="certificate1.jpg" style="width:100%; border-radius:10px;">
-    <h3>1. SAP S/4 HANA DEVELOPMENT</h3>
-    <p>01-02-2025 to 01-08-2025 | SAP University Alliances</p>
-  </div>
+<div class="section">
+<h2>📞 Contact</h2>
+<p>📧 divyanshipriya2006@gmail.com<br>📍 Nalanda, Bihar, India<br>🔗 linkedin.com/in/divyanshipriya</p>
+</div>
 
-  <div style="background:white; border-radius:15px; padding:15px; margin:15px auto; max-width:650px; color:#333;">
-    <img src="certificate2.jpg" style="width:100%; border-radius:10px;">
-    <h3>2. Networking Virtual Internship - 10 Weeks</h3>
-    <p>Sep - Nov 2023 | AICTE + EduSkills + Juniper</p>
-  </div>
+<p class="footer">© 2026 Divyanshi Priya | Made with ❤️</p>
 
-  <div style="background:white; border-radius:15px; padding:15px; margin:15px auto; max-width:650px; color:#333;">
-    <img src="certificate3.jpg" style="width:100%; border-radius:10px;">
-    <h3>3. Getting Started with Networking</h3>
-    <p>01 Nov 2023 | Juniper Networks</p>
-  </div>
+<!-- POP OUT BOX -->
+<div id="myModal" class="modal" onclick="closeModal()">
+<span class="close">&times;</span>
+<img id="modalImg">
+</div>
 
-  <div style="background:white; border-radius:15px; padding:15px; margin:15px auto; max-width:650px; color:#333;">
-    <img src="certificate4.jpg" style="width:100%; border-radius:10px;">
-    <h3>4. JNCIA-Junos</h3>
-    <p>02 Nov 2023 | Juniper Networks</p>
-  </div>
-</section>
+<script>
+function openModal(src){ document.getElementById('myModal').style.display='flex'; document.getElementById('modalImg').src=src; }
+function closeModal(){ document.getElementById('myModal').style.display='none'; }
+</script>
+
 </body>
 </html>
