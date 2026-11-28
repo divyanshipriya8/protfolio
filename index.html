@@ -3,133 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divyanshi Priya - Portfolio</title>
+<title>Divyanshi Priya | Portfolio</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-body { background:#0d1117; color:white; padding:20px; }
-.container { max-width:800px; margin:auto; }
-.profile { text-align:center; padding:30px 10px; }
-.profile img { width:130px; height:130px; border-radius:50%; border:3px solid #a371f7; object-fit:cover; }
-.profile h1 { font-size:28px; margin-top:12px; }
-.profile p { color:#8b949e; margin-top:6px; line-height:1.5; }
-.btn { display:inline-block; background:#238636; color:white; padding:10px 20px; border-radius:20px; text-decoration:none; margin-top:15px; font-weight:bold; }
-h2 { margin:30px 0 15px 0; font-size:22px; border-bottom:1px solid #30363d; padding-bottom:8px; }
-.card { background:#161b22; border:1px solid #30363d; border-radius:12px; padding:18px; margin-bottom:14px; cursor:pointer; transition:0.2s; }
-.card:hover { border-color:#a371f7; transform:scale(1.01); }
-.card h3 { font-size:18px; margin-bottom:6px; }
-.card p { color:#8b949e; font-size:14px; line-height:1.5; }
-.card span { display:inline-block; background:#21262d; color:#58a6ff; padding:4px 10px; border-radius:20px; font-size:12px; margin-top:10px; }
-.skills span { display:inline-block; background:#21262d; border:1px solid #30363d; padding:7px 14px; border-radius:20px; margin:4px; font-size:14px; }
-.footer { text-align:center; color:#8b949e; margin-top:30px; font-size:14px; padding-bottom:20px; }
-.footer a { color:#58a6ff; text-decoration:none; }
-
-/* POPUP */
-#popup { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:999; justify-content:center; align-items:center; flex-direction:column; }
-#popup img { max-width:92%; max-height:82%; border:3px solid white; border-radius:12px; }
-#popup span { position:absolute; top:12px; right:22px; color:white; font-size:40px; cursor:pointer; }
-#popup p { color:white; margin-top:12px; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#0d1117;color:#fff;padding:20px}
+.box{max-width:820px;margin:auto}
+.top{text-align:center;padding:25px 10px}
+.top img{width:135px;height:135px;border-radius:50%;border:3px solid #a371f7;object-fit:cover}
+.top h1{font-size:28px;margin-top:12px}
+.top p{color:#8b949e;margin-top:8px;line-height:1.6}
+.btn{display:inline-block;background:#238636;color:#fff;padding:10px 22px;border-radius:25px;text-decoration:none;margin-top:15px;font-weight:bold}
+h2{margin:35px 0 15px;font-size:22px;border-bottom:1px solid #30363d;padding-bottom:8px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:14px;padding:18px;margin-bottom:14px;display:block;text-decoration:none;color:#fff}
+.card:hover{border-color:#a371f7}
+.card h3{font-size:18px;color:#58a6ff;margin-bottom:6px}
+.card p{color:#8b949e;font-size:14px;line-height:1.5}
+.tag{display:inline-block;background:#21262d;color:#fbbf24;padding:5px 12px;border-radius:20px;font-size:12px;margin-top:10px}
+.skill{display:inline-block;background:#21262d;border:1px solid #30363d;padding:8px 15px;border-radius:20px;margin:4px;font-size:14px}
+.footer{text-align:center;color:#8b949e;margin-top:35px;padding-bottom:20px;font-size:14px}
 </style>
 </head>
 <body>
-<div class="container">
+<div class="box">
 
-<div class="profile">
-<img src="https://github.com/Divyanshi2320.png" alt="Divyanshi Priya">
+<div class="top">
+<img src="https://github.com/Divyanshi2320.png" alt="Divyanshi">
 <h1>Hi, I'm Divyanshi Priya 👋</h1>
-<p>B.Tech CSE Student | Interested in Networking, SAP & Web Development<br>Techno India University, West Bengal</p>
+<p>B.Tech CSE Student<br>Networking | SAP | Web Development<br>Techno India University, West Bengal</p>
 <a class="btn" href="https://github.com/Divyanshi2320">Follow on GitHub</a>
 </div>
 
 <h2>💻 About Me</h2>
 <div class="card" style="cursor:default;">
-<p>I am a Computer Science student learning and building projects in Web Development, Networking and SAP. I love to learn new technologies and make useful projects.</p>
+<p>I am a Computer Science student learning and building projects in Web Development, Networking and SAP. I love learning new technologies.</p>
 </div>
 
 <h2>🛠️ Skills</h2>
-<div class="skills">
-<span>🌐 Networking</span>
-<span>💙 SAP S/4 HANA</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>Python</span>
-<span>Java</span>
-<span>Git & GitHub</span>
-</div>
-
-<h2>📂 Popular Repositories</h2>
-
-<div class="card" style="cursor:default;">
-<h3>🌐 Portfolio Website</h3>
-<p>My personal portfolio website made with HTML & CSS, hosted on GitHub Pages.</p>
-<p><span>● HTML</span> <span>● CSS</span></p>
-</div>
-
-<div class="card" style="cursor:default;">
-<h3>💙 SAP Projects</h3>
-<p>Projects and learning notes related to SAP S/4 HANA Development.</p>
-<p><span>● SAP</span></p>
-</div>
-
-<div class="card" style="cursor:default;">
-<h3>🐍 Python Projects</h3>
-<p>Small Python projects and practice programs.</p>
-<p><span>● Python</span></p>
+<div>
+<span class="skill">🌐 Networking</span>
+<span class="skill">💙 SAP S/4 HANA</span>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Python</span>
+<span class="skill">Java</span>
+<span class="skill">Git & GitHub</span>
 </div>
 
 <h2>🏆 My Certificates</h2>
-<p style="color:#8b949e; font-size:14px; margin-bottom:12px;">Click any certificate to view in full size 👇</p>
+<p style="color:#8b949e;font-size:14px;margin-bottom:14px;">Kisi bhi certificate pe click karo - photo full me khulegi 👇</p>
 
-<div class="card" onclick="openPopup('sap.jpg','SAP S/4 HANA Development')">
+<a class="card" href="sapcertificate.jpeg" target="_blank">
 <h3>💙 SAP S/4 HANA Development</h3>
 <p>SAP University Alliances | Techno India University, West Bengal. 01-02-2025 to 01-08-2025.</p>
-<p><span>● Certificate • SAP • Click to View 👀</span></p>
-</div>
+<span class="tag">● SAP • Click to View 👀</span>
+</a>
 
-<div class="card" onclick="openPopup('networking.jpg','Networking Virtual Internship - AICTE')">
+<a class="card" href="networking.jpeg" target="_blank">
 <h3>🌐 Networking Virtual Internship</h3>
-<p>AICTE - EduSkills | Supported by Juniper Networks. 10 Weeks Virtual Internship - Sept to Nov 2023.</p>
-<p><span>● Certificate • AICTE • Click to View 👀</span></p>
-</div>
+<p>AICTE - EduSkills | Supported by Juniper Networks. 10 Weeks - Sept to Nov 2023.</p>
+<span class="tag">● AICTE • Click to View 👀</span>
+</a>
 
-<div class="card" onclick="openPopup('jncia.jpg','JNCIA-Junos - Juniper Networks')">
+<a class="card" href="junos.jpeg" target="_blank">
 <h3>🌐 JNCIA-Junos - Juniper Networks</h3>
-<p>Juniper Education Services - Open Learning - Junos, Associate (JNCIA-Junos). Completed on 2 Nov 2023.</p>
-<p><span>● Certificate • Juniper • Click to View 👀</span></p>
-</div>
+<p>Juniper Education Services - Junos, Associate (JNCIA-Junos). Completed on 2 Nov 2023.</p>
+<span class="tag">● Juniper • Click to View 👀</span>
+</a>
 
-<div class="card" onclick="openPopup('getting-started.jpg','Getting Started with Networking')">
+<a class="card" href="networkingvirtual.jpeg" target="_blank">
 <h3>🌐 Getting Started with Networking</h3>
 <p>Juniper Networks - eLearning Course. Successfully Completed on 1 Nov 2023.</p>
-<p><span>● Certificate • Juniper • Click to View 👀</span></p>
-</div>
+<span class="tag">● Juniper • Click to View 👀</span>
+</a>
 
-<h2>📞 Contact Me</h2>
+<h2>📞 Contact</h2>
 <div class="card" style="cursor:default;">
-<p>📧 GitHub: <a href="https://github.com/Divyanshi2320" style="color:#58a6ff;">github.com/Divyanshi2320</a></p>
+<p>GitHub: <a href="https://github.com/Divyanshi2320" style="color:#58a6ff;">github.com/Divyanshi2320</a></p>
 <p style="margin-top:8px;">📍 West Bengal, India</p>
 </div>
 
 <p class="footer">Made with ❤️ by Divyanshi Priya</p>
 </div>
-
-<!-- POPUP -->
-<div id="popup" onclick="closePopup()">
-<span>&times;</span>
-<img id="popupImg" src="">
-<p id="popupText"></p>
-</div>
-
-<script>
-function openPopup(img, text){
-  document.getElementById('popupImg').src = img;
-  document.getElementById('popupText').innerText = text;
-  document.getElementById('popup').style.display = 'flex';
-}
-function closePopup(){
-  document.getElementById('popup').style.display = 'none';
-}
-</script>
-
 </body>
 </html>
